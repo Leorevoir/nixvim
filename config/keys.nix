@@ -5,36 +5,20 @@
     # General maps
     {
       mode = "n";
-      key = "<leader>/";
-      action = "<cmd>nohl<CR>";
-      options = {
-        desc = "Clear search";
-      };
-    }
-    {
-      mode = "n";
       key = "<leader>f";
       action = "+find/file";
-      options = {
-        desc = "+file/file";
-      };
     }
+
     {
       mode = "n";
       key = "<leader>s";
       action = "+search";
-      options = {
-        desc = "+search";
-      };
     }
 
     {
       mode = "n";
       key = "<leader>q";
       action = "+quit/session";
-      options = {
-        desc = "+quit/session";
-      };
     }
 
     {
@@ -44,36 +28,33 @@
       ];
       key = "<leader>g";
       action = "+git";
-      options = {
-        desc = "+git";
-      };
     }
 
     {
       mode = "n";
       key = "<leader>u";
       action = "+ui";
-      options = {
-        desc = "+ui";
-      };
     }
 
     {
       mode = "n";
       key = "<leader>w";
       action = "+windows";
-      options = {
-        desc = "+windows";
-      };
     }
 
     {
       mode = "n";
       key = "<leader><Tab>";
       action = "+tab";
-      options = {
-        desc = "+tab";
-      };
+    }
+
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<leader>d";
+      action = "+debug";
     }
 
     {
@@ -83,9 +64,15 @@
       ];
       key = "<leader>c";
       action = "+code";
-      options = {
-        desc = "+code";
-      };
+    }
+
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<leader>t";
+      action = "+test";
     }
 
     # Tabs
@@ -314,6 +301,31 @@
       };
     }
 
+    # Copy stuff to system clipboard with <leader> + y or just y to have it just in vim
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<leader>y";
+      action = ''"+y'';
+      options = {
+        desc = "Copy to system clipboard";
+      };
+    }
+
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<leader>Y";
+      action = ''"+Y'';
+      options = {
+        desc = "Copy to system clipboard";
+      };
+    }
+
     # Delete to void register
     {
       mode = [
@@ -334,102 +346,19 @@
       action = "<Esc>";
     }
 
+    # my custom shortcuts
     {
       mode = "n";
-      key = "<leader>m";
-      action = "<CMD> Grapple toggle <CR>";
-      options = {
-        desc = "Grapple Toggle tag";
-      };
+      key = "<leader>e";
+      action = ":NvimTreeToggle<CR>";
     }
 
     {
       mode = "n";
-      key = "<leader>k";
-      action = "<CMD> Grapple toggle_tags <CR>";
-      options = {
-        desc = "Grapple Toggle tag";
-      };
+      key = "<leader>x";
+      action = ":bd<CR>";
     }
 
-    {
-      mode = "n";
-      key = "<leader>K";
-      action = "<CMD> Grapple toggle_scopes <CR>";
-      options = {
-        desc = "Grapple Toggle scopes";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>j";
-      action = "<CMD> Grapple cycle forward <CR>";
-      options = {
-        desc = "Grapple Cycle forward";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>J";
-      action = "<CMD> Grapple cycle backward <CR>";
-      options = {
-        desc = "Grapple Cycle backward";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>1";
-      action = "<CMD> Grapple select index=1<CR>";
-      options = {
-        desc = "Grapple Select 1";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>2";
-      action = "<CMD> Grapple select index=2<CR>";
-      options = {
-        desc = "Grapple Select 2";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>3";
-      action = "<CMD> Grapple select index=3<CR>";
-      options = {
-        desc = "Grapple Select 3";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>4";
-      action = "<CMD> Grapple select index=4<CR>";
-      options = {
-        desc = "Grapple Select 4";
-      };
-    }
-    {
-      mode = "n";
-      key = "<C-Tab>";
-      action = "<CMD>Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<CR>";
-      options = {
-        desc = "Next buffer";
-      };
-    }
-    {
-      mode = "n";
-      key = "<S-Tab>";
-      action = "<CMD>bprev<CR>";
-      options = {
-        desc = "Previous buffer";
-      };
-    }
   ];
   extraConfigLua = ''
     function ToggleLineNumber()

@@ -1,15 +1,8 @@
-{ lib, config, ... }:
 {
   plugins.telescope = {
     enable = true;
     extensions = {
       file-browser = {
-        enable = true;
-      };
-      ui-select = {
-        enable = true;
-      };
-      frecency = {
         enable = true;
       };
       fzf-native = {
@@ -25,28 +18,18 @@
         };
         sorting_strategy = "ascending";
       };
-      pickers = {
-        colorscheme = {
-          enable_preview = true;
-        };
-      };
-      mappings = {
-        # This is not working, use Alt + the key instead 🤷
-        n = {
-          "d" = {
-            __raw = "require('telescope.actions').delete_buffer";
-          };
-          "q" = {
-            __raw = "require('telescope.actions').close";
-          };
-        };
-      };
     };
     keymaps = {
       "<leader><space>" = {
         action = "find_files";
         options = {
           desc = "Find project files";
+        };
+      };
+      "<leader>/" = {
+        action = "live_grep";
+        options = {
+          desc = "Grep (root dir)";
         };
       };
       "<leader>:" = {
@@ -61,19 +44,19 @@
           desc = "+buffer";
         };
       };
-      # "<leader>ff" = {
-      #   action = "find_files";
-      #   options = {
-      #     desc = "Find project files";
-      #   };
-      # };
+      "<leader>ff" = {
+        action = "find_files";
+        options = {
+          desc = "Find project files";
+        };
+      };
       "<leader>fr" = {
         action = "live_grep";
         options = {
           desc = "Find text";
         };
       };
-      "<leader>fe" = {
+      "<leader>fR" = {
         action = "resume";
         options = {
           desc = "Resume";
@@ -175,6 +158,12 @@
           desc = "Options";
         };
       };
+      "<leader>sR" = {
+        action = "resume";
+        options = {
+          desc = "Resume";
+        };
+      };
       "<leader>uC" = {
         action = "colorscheme";
         options = {
@@ -183,7 +172,7 @@
       };
     };
   };
-  keymaps = lib.mkIf config.plugins.telescope.enable [
+  keymaps = [
     {
       mode = "n";
       key = "<leader>sd";
@@ -194,23 +183,28 @@
     }
     {
       mode = "n";
-      key = "<leader>ff";
-      action.__raw = ''
-        function()
-            require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") })
-          end
-      '';
-      options.desc = "Search file cwd";
+      key = "<leader>fe";
+      action = "<cmd>Telescope file_browser<cr>";
+      options = {
+        desc = "File browser";
+      };
     }
     {
       mode = "n";
-      key = "<leader>fR";
-      action.__raw = ''
-        function()
-           require("telescope.builtin").live_grep({ cwd = vim.fn.expand("%:p:h") })
-          end
-      '';
-      options.desc = "Grep cwd";
+      key = "<leader>fE";
+      action = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>";
+      options = {
+        desc = "File browser";
+      };
     }
   ];
+  extraConfigLua = ''
+    require("telescope").setup{
+      pickers = {
+        colorscheme = {
+          enable_preview = true
+        }
+      }
+    }
+  '';
 }

@@ -16,53 +16,39 @@ in
             bg = "none";
           };
           background = {
-            fg = "none";
-            bg = "none";
-          };
-          buffer = {
-            fg = "none";
-            bg = "none";
+            fg = colors.base03;
+            bg = colors.base01;
           };
           buffer_selected = {
             fg = colors.base05;
-            bg = colors.base01;
             italic = false;
           };
           buffer_visible = {
-            fg = colors.base05;
-            bg = "none";
+            fg = colors.base03;
+            bg = colors.base00;
           };
           close_button = {
-            fg = "none";
-            bg = "none";
+            fg = colors.base03;
+            bg = colors.base01;
           };
           close_button_visible = {
             fg = colors.base03;
-            bg = "none";
+            bg = colors.base01;
           };
           close_button_selected = {
             fg = colors.base08;
-            bg = colors.base01;
           };
+
           indicator_selected = {
-            fg = colors.base0E;
-            bg = colors.base01;
+            fg = colors.base00;
           };
           indicator_visible = {
-            fg = colors.base0E;
-            bg = "none";
+            fg = colors.base00;
+            bg = colors.base00;
           };
           separator = {
-            fg = colors.base00;
-            bg = colors.base00;
-          };
-          separator_selected = {
-            fg = colors.base00;
-            bg = colors.base00;
-          };
-          separator_visible = {
-            fg = colors.base00;
-            bg = colors.base00;
+            fg = colors.base01;
+            bg = colors.base01;
           };
           modified = {
             fg = colors.base03;
@@ -74,30 +60,20 @@ in
           };
           modified_selected = {
             fg = colors.base0B;
-            bg = colors.base01;
           };
           tab_close = {
             fg = colors.base00;
             bg = colors.base00;
           };
           duplicate = {
-            bg = "none";
-            italic = false;
-          };
-          duplicate_visible = {
-            bg = "none";
-            italic = false;
-          };
-          duplicate_selected = {
-            fg = "none";
+            fg = colors.base03;
             bg = colors.base01;
-            italic = false;
           };
         };
       };
     };
   };
-  keymaps = lib.mkIf config.plugins.bufferline.enable [
+  keymaps = [
     {
       mode = "n";
       key = "<Tab>";
