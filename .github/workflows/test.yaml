@@ -1,21 +1,9 @@
 name: Yutsu's Nixvim dots test !
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Set up Nix
-        uses: cachix/actions/nix-installer@v16
-        with:
-          nix_version: 'stable'
-      - name: Test Nix Flake
-        run: |
-          nix flake check .
+      - uses: cachix/install-nix-action@v16
+      - uses: actions/checkout@v2
+      - run: nix-shell

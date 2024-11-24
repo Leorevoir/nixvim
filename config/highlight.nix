@@ -13,7 +13,6 @@ in
         fg = "none";
         bg = "none";
       };
-
       AlphaHeader = {
         fg = colors.base0E;
         bg = "none";
