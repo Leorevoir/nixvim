@@ -38,7 +38,7 @@ in `NixOS`.
 {
   inputs = {
     nixvim = {
-      url = "github:Leorevoir//nixvim";
+      url = "github:Leorevoir/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -46,17 +46,17 @@ in `NixOS`.
 
 # your_home-manager.nix
 {
-  pkgs
-  , username
-  , inputs
-  , ...
-};
-{
-  home = {
-    packages = [
-      inputs.nixvim.packages.${pkgs.system}.default
-    ];
- };
+  inputs,
+  pkgs,
+  ...
+}: {
+  home-manager.sharedModules = [
+    (_: {
+      home.packages = with pkgs; [
+        inputs.nixvim.packages.${system}.default
+      ];
+    })
+  ];
 }
 ```
 
