@@ -6,6 +6,7 @@
     ./sets.nix
     ./highlight.nix
 
+    ./plug/colorscheme/web-devicons.nix
     ./plug/colorscheme/biscuit.nix
     ./plug/colorscheme/colorscheme.nix
 
