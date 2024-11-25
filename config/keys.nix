@@ -351,12 +351,18 @@
       mode = "n";
       key = "<leader>e";
       action = ":NvimTreeToggle<CR>";
+      options = {
+        silent = true;
+      };
     }
 
     {
       mode = "n";
       key = "<leader>x";
       action = ":bd<CR>";
+      options = {
+        silent = true;
+      };
     }
 
   ];
