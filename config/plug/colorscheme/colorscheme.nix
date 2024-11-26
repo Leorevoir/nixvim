@@ -1,6 +1,4 @@
-{config, ...}: let
-  lua = x: {__raw = x;};
-in {
+{
   colorschemes = {
     catppuccin = {
       enable = true;
@@ -34,14 +32,15 @@ in {
               background = true;
             };
             underlines = {
-              errors = ["underline"];
-              hints = ["underline"];
-              information = ["underline"];
-              warnings = ["underline"];
+              errors = [ "underline" ];
+              hints = [ "underline" ];
+              information = [ "underline" ];
+              warnings = [ "underline" ];
             };
           };
         };
       };
     };
   };
+  plugins.web-devicons.enable = true;
 }
