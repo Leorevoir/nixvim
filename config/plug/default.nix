@@ -8,9 +8,7 @@
     ./completion/lspkind.nix
     ./completion/schemastore.nix
 
-    ./git/gitlinker.nix
     ./git/gitsigns.nix
-    ./git/lazygit.nix
     ./git/worktree.nix
 
     ./lsp/fidget.nix
@@ -31,7 +29,6 @@
     ./ui/bufferline.nix
     ./ui/indent-blankline.nix
     ./ui/noice.nix
-    #./ui/nvim-notify.nix
     ./ui/telescope.nix
     ./ui/nvim-tree.nix
 
@@ -44,7 +41,6 @@
     ./utils/nvim-autopairs.nix
     ./utils/oil.nix
     ./utils/ufo.nix
-    ./utils/undotree.nix
     ./utils/whichkey.nix
     ./utils/yaml-companion.nix
     ./utils/neocord.nix
