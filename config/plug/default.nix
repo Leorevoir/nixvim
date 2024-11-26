@@ -31,7 +31,7 @@
     ./ui/bufferline.nix
     ./ui/indent-blankline.nix
     ./ui/noice.nix
-    ./ui/nvim-notify.nix
+    #./ui/nvim-notify.nix
     ./ui/telescope.nix
     ./ui/nvim-tree.nix
 
