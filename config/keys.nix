@@ -43,57 +43,12 @@
     }
 
     {
-      mode = "n";
-      key = "<leader><Tab>";
-      action = "+tab";
-    }
-
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>d";
-      action = "+debug";
-    }
-
-    {
       mode = [
         "n"
         "v"
       ];
       key = "<leader>c";
       action = "+code";
-    }
-
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>t";
-      action = "+test";
-    }
-
-    # Tabs
-    {
-      mode = "n";
-      key = "<leader><tab><tab>";
-      action = "<cmd>tabnew<cr>";
-      options = {
-        silent = true;
-        desc = "New Tab";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader><tab>d";
-      action = "<cmd>tabclose<cr>";
-      options = {
-        silent = true;
-        desc = "Close tab";
-      };
     }
 
     # Windows
@@ -346,11 +301,12 @@
       action = "<Esc>";
     }
 
-    # my custom shortcuts
+    # NVimTree
     {
       mode = "n";
       key = "<leader>e";
-      action = ":NvimTreeToggle<CR>";
+      #action = ":NvimTreeToggle<CR>";
+      action = "<cmd>NvimTreeFocus<CR>";
       options = {
         silent = true;
       };
