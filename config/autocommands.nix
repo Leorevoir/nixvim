@@ -23,5 +23,16 @@
       ];
       command = "setlocal spell spelllang=en,fr";
     }
+
+    # File-specific indentation rules
+    {
+      event = "FileType";
+      pattern = [
+        "nix"
+        "html"
+      ];
+      command = "setlocal shiftwidth=2 tabstop=2";
+    }
+
   ];
 }

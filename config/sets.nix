@@ -13,7 +13,7 @@
 
       # Enable auto indenting and set it to spaces
       smartindent = true;
-      shiftwidth = 2;
+      shiftwidth = 4;
 
       # Enable smart indenting (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
       breakindent = true;
