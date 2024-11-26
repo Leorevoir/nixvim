@@ -320,6 +320,16 @@
       };
     }
 
+    # Select ALL
+    {
+      mode = "n";
+      key = "<C-a>";
+      action = "ggVG";
+      options = {
+        silent = true;
+      };
+    }
+
   ];
   extraConfigLua = ''
     function ToggleLineNumber()
