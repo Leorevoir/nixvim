@@ -1,6 +1,7 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ pkgs ? import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-24.11.tar.gz") { } }:
 
-pkgs.mkShell {
+pkgs.mkShell
+{
   buildInputs = with pkgs; [
     procps
   ];
