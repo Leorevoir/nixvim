@@ -26,19 +26,18 @@
           desc = "Find project files";
         };
       };
-      "<leader>/" = {
+      "<leader>r/" = {
         action = "live_grep";
         options = {
           desc = "Grep (root dir)";
         };
       };
-      "<leader>r" = {
+      "<leader>rr" = {
         action = "live_grep";
         options = {
           desc = "Grep (current dir)";
         };
       };
-
       "<leader>:" = {
         action = "command_history";
         options = {
@@ -51,13 +50,6 @@
           desc = "+buffer";
         };
       };
-      "<leader>ff" = {
-        action = "find_files";
-        options = {
-          desc = "Find project files";
-        };
-      };
-
       "<C-p>" = {
         action = "git_files";
         options = {
@@ -89,12 +81,6 @@
         };
       };
       "<leader>sc" = {
-        action = "command_history";
-        options = {
-          desc = "Command History";
-        };
-      };
-      "<leader>sC" = {
         action = "commands";
         options = {
           desc = "Commands";
