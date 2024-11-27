@@ -111,7 +111,7 @@
               (
                 mkButton
                   "qq"
-                  "  Quit neovim"
+                  "  Quit nixvim"
                   "<CMD>quitall<CR><esc>"
                   "vim.cmd(\"quitall\")"
               )
@@ -127,7 +127,6 @@
           opts = {
             position = "center";
             hl = "Keyword";
-            # hl = "AlphaButtons";
           };
         }
       ];
