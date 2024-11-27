@@ -3,7 +3,7 @@
     enable = true;
     notify_on_error = true;
     formatters_by_ft = {
-      liquidsoap = ["liquidsoap-prettier"];
+      liquidsoap = [ "liquidsoap-prettier" ];
       html = [
         [
           "prettierd"
@@ -40,18 +40,14 @@
           "prettier"
         ]
       ];
-      python = ["black"];
-      lua = ["stylua"];
-      nix = ["nixfmt"];
+      python = [ "black" ];
+      lua = [ "stylua" ];
+      nix = [ "nixfmt" ];
       markdown = [
         [
           "prettierd"
           "prettier"
         ]
-      ];
-      yaml = [
-        "yamllint"
-        "yamlfmt"
       ];
     };
   };

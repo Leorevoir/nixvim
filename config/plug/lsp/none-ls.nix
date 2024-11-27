@@ -12,7 +12,6 @@
       };
       diagnostics = {
         statix.enable = true;
-        yamllint.enable = true;
       };
       formatting = {
         nixpkgs_fmt.enable = true;
@@ -34,7 +33,6 @@
           '';
         };
         stylua.enable = true;
-        yamlfmt.enable = true;
       };
     };
   };

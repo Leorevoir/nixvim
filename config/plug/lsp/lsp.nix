@@ -33,9 +33,6 @@
         ts_ls = {
           enable = false;
         };
-        yamlls = {
-          enable = true;
-        };
       };
       keymaps = {
         silent = true;
