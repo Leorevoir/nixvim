@@ -282,7 +282,7 @@
     {
       mode = "n";
       key = "<leader>t";
-      action = "<C-W>s +:terminal<CR>";
+      action = "<C-W>s +:terminal<CR>i";
       options = {
         silent = true;
       };
