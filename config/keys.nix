@@ -74,7 +74,7 @@
 
     {
       mode = "n";
-      key = "<leader>w-";
+      key = "<leader>wj";
       action = "<C-W>s";
       options = {
         silent = true;
@@ -84,7 +84,7 @@
 
     {
       mode = "n";
-      key = "<leader>w|";
+      key = "<leader>wl";
       action = "<C-W>v";
       options = {
         silent = true;
@@ -246,68 +246,12 @@
       };
     }
 
-    # Paste stuff without saving the deleted word into the buffer
-    {
-      mode = "x";
-      key = "<leader>p";
-      action = ''"_dP'';
-      options = {
-        desc = "Deletes to void register and paste over";
-      };
-    }
-
-    # Copy stuff to system clipboard with <leader> + y or just y to have it just in vim
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>y";
-      action = ''"+y'';
-      options = {
-        desc = "Copy to system clipboard";
-      };
-    }
-
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>Y";
-      action = ''"+Y'';
-      options = {
-        desc = "Copy to system clipboard";
-      };
-    }
-
-    # Delete to void register
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>D";
-      action = ''"_d'';
-      options = {
-        desc = "Delete to void register";
-      };
-    }
-
-    # <C-c> instead of pressing esc just because
-    {
-      mode = "i";
-      key = "<C-c>";
-      action = "<Esc>";
-    }
-
     # NVimTree
     {
       mode = "n";
       key = "<leader>e";
       action = "<cmd>NvimTreeFocus<CR>";
       options = {
-        desc = "Tree";
         silent = true;
       };
     }
@@ -315,7 +259,7 @@
     {
       mode = "n";
       key = "<leader>x";
-      action = ":bd<CR>";
+      action = "<C-W>c";
       options = {
         silent = true;
       };
