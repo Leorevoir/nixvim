@@ -278,28 +278,38 @@
       };
     }
 
+    # Open a terminal below
+    {
+      mode = "n";
+      key = "<leader>t";
+      action = "<C-W>s +:terminal<CR>";
+      options = {
+        silent = true;
+      };
+    }
+
   ];
   extraConfigLua = ''
     function ToggleLineNumber()
-    if vim.wo.number then
-      vim.wo.number = false
-    else
-      vim.wo.number = true
-        vim.wo.relativenumber = false
-        end
-        end
-
-        function ToggleRelativeLineNumber()
-        if vim.wo.relativenumber then
-          vim.wo.relativenumber = false
+        if vim.wo.number then
+          vim.wo.number = false
         else
-          vim.wo.relativenumber = true
-            vim.wo.number = false
-            end
-            end
+          vim.wo.number = true
+          vim.wo.relativenumber = false
+          end
+    end
 
-            function ToggleWrap()
-            vim.wo.wrap = not vim.wo.wrap
-            end
+    function ToggleRelativeLineNumber()
+        if vim.wo.relativenumber then
+            vim.wo.relativenumber = false
+        else
+            vim.wo.relativenumber = true
+            vim.wo.number = false
+        end
+    end
+
+    function ToggleWrap()
+        vim.wo.wrap = not vim.wo.wrap
+    end
   '';
 }
