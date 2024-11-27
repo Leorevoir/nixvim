@@ -22,6 +22,9 @@
 
     ./statusline/lualine.nix
 
+    ./treesitter/treesitter.nix
+    ./treesitter/treesitter-object.nix
+
     ./ui/alpha.nix
     ./ui/bufferline.nix
     ./ui/indent-blankline.nix
