@@ -3,6 +3,7 @@
 
     ./colorscheme/biscuit.nix
     ./colorscheme/colorscheme.nix
+    ./colorscheme/web-devicons.nix
 
     ./completion/cmp.nix
     ./completion/lspkind.nix
@@ -22,10 +23,7 @@
 
     ./statusline/lualine.nix
 
-    ./treesitter/treesitter-textobjects.nix
-    ./treesitter/treesitter.nix
-
-    ./ui/btw.nix
+    ./ui/alpha.nix
     ./ui/bufferline.nix
     ./ui/indent-blankline.nix
     ./ui/noice.nix
@@ -42,7 +40,7 @@
     ./utils/oil.nix
     ./utils/ufo.nix
     ./utils/whichkey.nix
-    ./utils/yaml-companion.nix
+    # ./utils/yaml-companion.nix
     ./utils/neocord.nix
   ];
 
