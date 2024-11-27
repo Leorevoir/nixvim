@@ -9,6 +9,10 @@
         eslint = {
           enable = true;
         };
+        hls = {
+          enable = true;
+          installGhc = true;
+        };
         html = {
           enable = true;
         };
