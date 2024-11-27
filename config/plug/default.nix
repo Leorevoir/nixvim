@@ -7,7 +7,6 @@
 
     ./completion/cmp.nix
     ./completion/lspkind.nix
-    ./completion/schemastore.nix
 
     ./git/gitsigns.nix
     ./git/worktree.nix
@@ -29,6 +28,7 @@
     ./ui/noice.nix
     ./ui/telescope.nix
     ./ui/nvim-tree.nix
+    ./ui/which-key.nix
 
     ./utils/comment.nix
     ./utils/comment-box.nix
@@ -39,8 +39,6 @@
     ./utils/nvim-autopairs.nix
     ./utils/oil.nix
     ./utils/ufo.nix
-    ./utils/whichkey.nix
-    # ./utils/yaml-companion.nix
     ./utils/neocord.nix
   ];
 
