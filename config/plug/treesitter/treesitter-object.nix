@@ -39,12 +39,6 @@
     };
     swap = {
       enable = true;
-      swapNext = {
-        "<leader>a" = "@parameters.inner";
-      };
-      swapPrevious = {
-        "<leader>A" = "@parameter.outer";
-      };
     };
   };
 }

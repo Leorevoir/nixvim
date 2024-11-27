@@ -31,7 +31,7 @@
           __unkeyed-1 = "<leader>c";
           group = "Code";
           desc = "Code";
-          icon = "";
+          icon = "</>";
         }
         {
           __unkeyed-1 = "<leader>s";
@@ -52,19 +52,24 @@
           icon = "󰈞";
         }
         {
-          __unkeyed-1 = "<leader>x";
-          desc = " Destroy";
-          icon = "";
-        }
-        {
           __unkeyed-1 = "<leader>e";
-          desc = " Tree";
+          desc = "Tree";
           icon = "";
         }
         {
           __unkeyed-1 = "<leader>:";
-          desc = " Command history";
+          desc = "Command history";
           icon = "";
+        }
+        {
+          __unkeyed-1 = "<leader>x";
+          desc = "Destroy buffer";
+          icon = "🗑️";
+        }
+        {
+          __unkeyed-1 = "<leader>k";
+          desc = "Pin buffer";
+          icon = "📌";
         }
       ];
     };

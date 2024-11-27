@@ -256,13 +256,16 @@
       };
     }
 
+    # Buffer shortcuts
     {
       mode = "n";
       key = "<leader>x";
-      action = "<C-W>c";
-      options = {
-        silent = true;
-      };
+      action = "<cmd>bdelete<cr>";
+    }
+    {
+      mode = "n";
+      key = "<leader>k";
+      action = "<cmd>BufferLineTogglePin<cr>";
     }
 
     # Select ALL
