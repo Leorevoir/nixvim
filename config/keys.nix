@@ -307,6 +307,7 @@
       key = "<leader>e";
       action = "<cmd>NvimTreeFocus<CR>";
       options = {
+        desc = "Tree";
         silent = true;
       };
     }
