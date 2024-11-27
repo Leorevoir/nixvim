@@ -257,11 +257,13 @@
     }
 
     # Buffer shortcuts
+    # delete no override
     {
       mode = "n";
       key = "<leader>x";
       action = "<cmd>bdelete<cr>";
     }
+    # pin buffer
     {
       mode = "n";
       key = "<leader>k";
@@ -286,6 +288,13 @@
       options = {
         silent = true;
       };
+    }
+
+    # Escape mode in terminal
+    {
+      mode = "t";
+      key = "<Esc>";
+      action = "<C-\\><C-n>";
     }
 
   ];
