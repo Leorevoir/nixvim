@@ -30,6 +30,8 @@
       pattern = [
         "nix"
         "html"
+        "css"
+        "scss"
       ];
       command = "setlocal shiftwidth=2 tabstop=2";
     }
