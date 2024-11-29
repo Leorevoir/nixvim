@@ -32,6 +32,8 @@
         "html"
         "css"
         "scss"
+        "json"
+        "yaml"
       ];
       command = "setlocal shiftwidth=2 tabstop=2";
     }
