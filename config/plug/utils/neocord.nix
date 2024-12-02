@@ -1,3 +1,0 @@
-{
-  plugins.neocord.enable = true;
-}
