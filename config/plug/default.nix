@@ -17,6 +17,7 @@
     ./lsp/lspsaga.nix
     ./lsp/none-ls.nix
     ./lsp/trouble.nix
+    ./lsp/conform.nix
 
     ./snippets/luasnip.nix
 
@@ -42,7 +43,6 @@
     ./utils/nvim-autopairs.nix
     ./utils/oil.nix
     ./utils/ufo.nix
-    ./utils/neocord.nix
   ];
 
 }
