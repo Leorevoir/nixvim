@@ -31,11 +31,8 @@
         gopls = {
           enable = true;
         };
-        terraformls = {
+        ruby_lsp = {
           enable = true;
-        };
-        ts_ls = {
-          enable = false;
         };
       };
       keymaps = {

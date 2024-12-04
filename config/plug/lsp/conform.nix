@@ -17,30 +17,6 @@
             "prettier"
           ]
         ];
-        javascript = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
-        javascriptreact = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
-        typescript = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
-        typescriptreact = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
         python = [ "black" ];
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
@@ -50,6 +26,7 @@
             "prettier"
           ]
         ];
+        ruby = [ "ruby-beauty" ];
       };
       formatters = {
         stylua = {
