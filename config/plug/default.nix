@@ -23,6 +23,8 @@
 
     ./statusline/lualine.nix
 
+    ./syntax/crystal.nix
+
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-object.nix
 
@@ -43,6 +45,7 @@
     ./utils/nvim-autopairs.nix
     ./utils/oil.nix
     ./utils/ufo.nix
+
   ];
 
 }
