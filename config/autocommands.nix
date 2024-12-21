@@ -38,5 +38,14 @@
       command = "setlocal shiftwidth=2 tabstop=2";
     }
 
+    {
+      event = "FileType";
+      pattern = [
+        "cr"
+        "rb"
+      ];
+      command = "setlocal shiftwidth=4 tabstop=4 sw=4 ts=4";
+    }
+
   ];
 }

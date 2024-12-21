@@ -34,6 +34,9 @@
         ruby_lsp = {
           enable = true;
         };
+        crystalline = {
+          enable = true;
+        };
       };
       keymaps = {
         silent = true;
