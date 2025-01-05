@@ -14,11 +14,18 @@
       enable = true;
       inlayHints = true;
       servers = {
+        jsonls = {
+          enable = true;
+        };
         html = {
           enable = true;
         };
         clangd = {
           enable = true;
+        };
+        hls = {
+          enable = true;
+          installGhc = true;
         };
         lua_ls = {
           enable = true;
@@ -26,10 +33,7 @@
         nil_ls = {
           enable = true;
         };
-        # crystalline = {
-        #   enable = true;
-        # };
-        ts_ls = {
+        crystalline = {
           enable = true;
         };
         marksman = {
@@ -38,18 +42,17 @@
         pyright = {
           enable = true;
         };
-        gopls = {
-          enable = true;
-        };
-        terraformls = {
-          enable = true;
-        };
-        ansiblels = {
-          enable = true;
-        };
-        jsonls = {
-          enable = true;
-        };
+        # crystalline = {
+        #   enable = true;
+        #   extraOptions = {
+        #     cmd = [ "${pkgs.crystalline}/bin/crystalline" ];
+        #     settings = {
+        #       completion = true;
+        #       diagnostics = true;
+        #       format = true;
+        #     };
+        #   };
+        # };
         helm_ls = {
           enable = true;
           extraOptions = {
