@@ -35,6 +35,7 @@
     ./ui/telescope.nix
 
     ./utils/autopair.nix
+    ./utils/mini.nix
     ./utils/which-key.nix
 
   ];
