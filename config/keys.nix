@@ -47,7 +47,8 @@
     {
       mode = "n";
       key = "<leader>t";
-      action = "<C-W>s +:terminal<CR>i";
+      # action = "<C-W>s +:terminal<CR>i";
+      action = ":sp +:terminal<CR>i";
       options = {
         silent = true;
       };
