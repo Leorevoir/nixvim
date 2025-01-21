@@ -1,0 +1,16 @@
+name: Yutsu's nixvim dots test !
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install nix-action
+        uses: cachix/install-nix-action@v17
+      - name: Activating experimental-features
+        shell: bash
+        run: |
+          export NIX_CONFIG="experimental-features = nix-command flakes"
+      - name: Testing flake configuration...
+        run: nix flake check

@@ -5,7 +5,8 @@
       settings = {
         background = {
           light = "frappe";
-          dark = "macchiato";
+          # dark = "macchiato";
+          dark = "frappe";
         };
         flavour = "macchiato"; # "latte", "mocha", "frappe", "macchiato" or raw lua code
         disableBold = false;

@@ -32,9 +32,13 @@
         };
         nil_ls = {
           enable = true;
-        };
-        crystalline = {
-          enable = true;
+          settings = {
+            nix = {
+              flake = {
+                autoArchive = true;
+              };
+            };
+          };
         };
         marksman = {
           enable = true;
@@ -42,17 +46,6 @@
         pyright = {
           enable = true;
         };
-        # crystalline = {
-        #   enable = true;
-        #   extraOptions = {
-        #     cmd = [ "${pkgs.crystalline}/bin/crystalline" ];
-        #     settings = {
-        #       completion = true;
-        #       diagnostics = true;
-        #       format = true;
-        #     };
-        #   };
-        # };
         helm_ls = {
           enable = true;
           extraOptions = {
@@ -79,8 +72,10 @@
                   "http://json.schemastore.org/ansible-playbook" = "*play*.{yml,yaml}";
                   "http://json.schemastore.org/chart" = "Chart.{yml,yaml}";
                   "https://json.schemastore.org/dependabot-v2" = ".github/dependabot.{yml,yaml}";
-                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "*docker-compose*.{yml,yaml}";
-                  "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" = "*flow*.{yml,yaml}";
+                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" =
+                    "*docker-compose*.{yml,yaml}";
+                  "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json" =
+                    "*flow*.{yml,yaml}";
                 };
               };
             };
