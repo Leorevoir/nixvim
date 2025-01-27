@@ -93,7 +93,7 @@
               )
               (
                 mkButton
-                  "fr"
+                  "rr"
                   "󰍉 Find Word"
                   "<CMD>lua require('telescope.builtin').live_grep()<CR>"
                   "require('telescope.builtin').live_grep()"
@@ -118,13 +118,6 @@
                   "  Configuration"
                   "<CMD>e ~/NixOS/<CR>"
                   "vim.cmd(\"e ~/NixOS/\")"
-              )
-              (
-                mkButton
-                  "rs"
-                  "  Restore last session"
-                  "<CMD>lua require('persistence').load()<CR>"
-                  "require('persistence').load()"
               )
               (
                 mkButton
