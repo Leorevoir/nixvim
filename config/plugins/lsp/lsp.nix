@@ -110,5 +110,12 @@
     require('lspconfig.ui.windows').default_options = {
       border = _border
     }
+
+    require("lspconfig").asm_lsp.setup({
+      filetypes = { "asm", "S", "s" },
+      root_dir = function(fname)
+        return vim.loop.cwd()
+      end,
+    })
   '';
 }
